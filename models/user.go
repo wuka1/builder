@@ -46,7 +46,7 @@ func GetUser(sig string) (*User, error) {
 	}
 
 	// don't worry cache expired. we just use username which can not modify
-	g.Cache.Put(key, *t.User, int64(360000))
+	g.Cache.Put(key, *t.User, time.Duration(int64(360000)))
 
 	return t.User, nil
 }
