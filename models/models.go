@@ -85,9 +85,9 @@ func (this *Build) DockerBuild(workDir string) {
 
 	err, timeout := systool.CmdRunWithTimeout(cmd, g.BuildTimeout)
 
-	if err != nil {
-		log.Printf("docker build %s/Dockerfile fail: %v", workDir, err)
-	}
+//	if err != nil {
+//		log.Printf("docker build %s/Dockerfile fail: %v", workDir, err)
+//	}
 
 	if timeout {
 		log.Printf("docker build %s/Dockerfile timeout", workDir)
